@@ -9,7 +9,7 @@ To determine whether a chaos-based generator can produce bit sequences that sati
 ## Method
 
 ### Chaotic Generator
-- Logistic map used in the chaotic regime:
+Logistic map used in the chaotic regime:
 x_{n+1} = r x_n (1 - x_n)
 
 ### Binarization
@@ -20,7 +20,7 @@ Real-valued outputs are transformed into binary using fixed-point scaling and bi
     - B bits are extracted (least significant bits)
 
 ### Evaluation
-- Generated sequences are tested using the NIST SP800-22 statistical test suite
+Generated sequences are tested using the NIST SP800-22 statistical test suite
 
 ## Repository Structure
 - `src/` → core implementation (R + Python)
