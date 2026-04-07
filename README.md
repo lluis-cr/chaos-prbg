@@ -9,15 +9,14 @@ To determine whether a chaos-based generator can produce bit sequences that sati
 ## Method
 ### Chaotic Generator
 * Logistic map used in the chaotic regime:
- \( x_{n+1} = r x_n (1 - x_n) \)
+  `x_{n+1} = r x_n (1 - x_n)`
 
 ### Binarization
 Real-valued outputs are transformed into binary using fixed-point scaling and bit extraction:
-
-* Each value is scaled by \(2^B\)
+* Each value is scaled by `2^B`
 * The integer part is extracted
 * Binary representation is computed
-* B bits are extracted (least significant bits)
+* `B` bits are extracted (least significant bits)
 
 ### Evaluation
 * Generated sequences are tested using the NIST SP800-22 statistical test suite
@@ -25,23 +24,24 @@ Real-valued outputs are transformed into binary using fixed-point scaling and bi
 ## Repository Structure
 * `src/` → core implementation (R + Python)
 * `docs/` → full modelling process and reasoning
-* `data/` → generated data
+* `data/` → generated and processed data
 
 ## Results
 * The generator produces sequences that pass the majority of NIST statistical tests
-* Some tests fail (specifically the Random Excursions tests), indicating structural deviations from expected statistical behaviour
+* Some tests fail, specifically the Random Excursions tests, indicating structural deviations from expected statistical behaviour
 * Failures are linked to:
+
   * Finite precision effects
   * Intrinsic properties of the chaotic map
   * The chosen bit extraction method
 
 ## Key Insights
 * Chaos alone does not guarantee cryptographic randomness
-* The binarization (bit extraction) process is a critical determinant of statistical quality
+* The binarization process is a critical determinant of statistical quality
 * Finite precision can introduce hidden periodicity, degrading randomness
 
 ## How to Run
-1. Install dependencies:
+1. Install dependencies, if required:
 
    ```bash
    pip install -r requirements.txt
@@ -58,12 +58,13 @@ Real-valued outputs are transformed into binary using fixed-point scaling and bi
 Statistical evaluation is performed using the NIST SP800-22 test suite.
 
 This project uses an external implementation available here:
-https://github.com/stevenang/randomness_testsuite
+`https://github.com/stevenang/randomness_testsuite`
 
 Refer to that repository for:
-* Installation instructions
-* Running individual tests
-* Interpretation of results
+
+* installation instructions
+* running individual tests
+* interpretation of results
 
 Generated bit sequences from this project can be used as input to the test suite.
 
