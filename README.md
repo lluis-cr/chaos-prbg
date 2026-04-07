@@ -32,9 +32,9 @@ Generated sequences are tested using the NIST SP800-22 statistical test suite
 - The generator produces sequences that pass the majority of NIST statistical tests
 - Some tests fail (specifically the Random Excursions tests), indicating structural deviations from expected statistical behaviour
 - Failures are linked to:
-  - finite precision effects
-  - intrinsic properties of the chaotic map
-  - the chosen bit extraction method
+  - Finite precision effects
+  - Intrinsic properties of the chaotic map
+  - The chosen bit extraction method
 
 ## Key Insights
 - Chaos alone does not guarantee cryptographic randomness  
@@ -55,9 +55,9 @@ This project uses an external implementation available here:
 (https://github.com/stevenang/randomness_testsuite/tree/master)
 
 Refer to that repository for:
-- installation instructions
-- running individual tests
-- interpretation of results
+- Installation instructions
+- Running individual tests
+- Interpretation of results
 
 Generated bit sequences from this project can be used as input to the test suite.
 
