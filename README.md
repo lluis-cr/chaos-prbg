@@ -62,11 +62,12 @@ This project uses an external implementation available here:
 
 Refer to that repository for:
 
-* installation instructions
-* running individual tests
-* interpretation of results
+* Installation instructions
+* Running individual tests
+* Interpretation of results
 
 Generated bit sequences from this project can be used as input to the test suite.
+Note: Some components (e.g. BinaryMatrix) are part of the external NIST test suite and are not included in this repository.
 
 ## Limitations
 * Passing statistical tests does not guarantee cryptographic security
