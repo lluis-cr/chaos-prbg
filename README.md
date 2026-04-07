@@ -25,8 +25,7 @@ Real-valued outputs are transformed into binary using fixed-point scaling and bi
 ## Repository Structure
 * `src/` → core implementation (R + Python)
 * `docs/` → full modelling process and reasoning
-* `outputs/` → test results and generated data
-* `archive/` → legacy or experimental code
+* `data/` → generated data
 
 ## Results
 * The generator produces sequences that pass the majority of NIST statistical tests
